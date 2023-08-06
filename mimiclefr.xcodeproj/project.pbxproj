@@ -1,0 +1,1079 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D827CDCD275732F200220B36 /* AppMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827CDCC275732F200220B36 /* AppMetaData.swift */; };
+		D827CDCF2757648900220B36 /* PushInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D827CDCE2757648900220B36 /* PushInfoData.swift */; };
+		D8288AB9274CA2860055773F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8288AB8274CA2860055773F /* Reachability.swift */; };
+		D8289E8E27E08286002D334F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8289E9027E08286002D334F /* InfoPlist.strings */; };
+		D828A1FE2754E21300ADC8D4 /* MimicleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828A1FD2754E21300ADC8D4 /* MimicleApi.swift */; };
+		D828A2022754E72400ADC8D4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D828A2012754E72400ADC8D4 /* Moya */; };
+		D828A2042754E72400ADC8D4 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D828A2032754E72400ADC8D4 /* RxMoya */; };
+		D82931E2274B69A800DD4174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82931E1274B69A800DD4174 /* AppDelegate.swift */; };
+		D82931E4274B69A800DD4174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82931E3274B69A800DD4174 /* SceneDelegate.swift */; };
+		D82931E6274B69A800DD4174 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82931E5274B69A800DD4174 /* WebViewController.swift */; };
+		D82931E9274B69A800DD4174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82931E7274B69A800DD4174 /* Main.storyboard */; };
+		D82931EB274B69AA00DD4174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82931EA274B69AA00DD4174 /* Assets.xcassets */; };
+		D82931EE274B69AA00DD4174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82931EC274B69AA00DD4174 /* LaunchScreen.storyboard */; };
+		D82931F9274B69AA00DD4174 /* mimicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82931F8274B69AA00DD4174 /* mimicleTests.swift */; };
+		D8293203274B69AA00DD4174 /* mimicleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8293202274B69AA00DD4174 /* mimicleUITests.swift */; };
+		D8293205274B69AA00DD4174 /* mimicleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8293204274B69AA00DD4174 /* mimicleUITestsLaunchTests.swift */; };
+		D8293213274B715200DD4174 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8293212274B715200DD4174 /* WebKit.framework */; };
+		D82EB42528309D550016BFE3 /* WKWebViewDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EB42028309D550016BFE3 /* WKWebViewDownloadHelper.swift */; };
+		D82EB42628309D550016BFE3 /* WKDownloadHelper+types.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EB42128309D550016BFE3 /* WKDownloadHelper+types.swift */; };
+		D82EB42728309D550016BFE3 /* WKDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EB42228309D550016BFE3 /* WKDownloadHelper.swift */; };
+		D82EB42828309D550016BFE3 /* WKDownloadHelper+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EB42328309D550016BFE3 /* WKDownloadHelper+delegate.swift */; };
+		D82EB42928309D550016BFE3 /* WKDownloadHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EB42428309D550016BFE3 /* WKDownloadHelperDelegate.swift */; };
+		D82ECC6A2769B03800F82838 /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = D82ECC672769B03800F82838 /* bell.wav */; };
+		D82ECC6B2769B03800F82838 /* electric_piano.wav in Resources */ = {isa = PBXBuildFile; fileRef = D82ECC682769B03800F82838 /* electric_piano.wav */; };
+		D82ECC6C2769B03800F82838 /* mimic.wav in Resources */ = {isa = PBXBuildFile; fileRef = D82ECC692769B03800F82838 /* mimic.wav */; };
+		D82ECC742769D08000F82838 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82ECC732769D08000F82838 /* NotificationService.swift */; };
+		D82ECC782769D08000F82838 /* Service.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D82ECC712769D08000F82838 /* Service.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D82ECC942769FD9A00F82838 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D82ECC932769FD9A00F82838 /* FirebaseMessaging */; };
+		D82FB7B327673A9D00DB5F16 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D82FB7B227673A9D00DB5F16 /* FirebaseAnalytics */; };
+		D82FB7B527673A9D00DB5F16 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D82FB7B427673A9D00DB5F16 /* FirebaseCrashlytics */; };
+		D82FB7B727673A9D00DB5F16 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D82FB7B627673A9D00DB5F16 /* FirebaseMessaging */; };
+		D83BD9E127DB2E2E000567AF /* splash2.png in Resources */ = {isa = PBXBuildFile; fileRef = D83BD9E027DB2E2E000567AF /* splash2.png */; };
+		D83E336527F1E561003F64FE /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = D83E336427F1E561003F64FE /* FacebookCore */; };
+		D83E336727F1E561003F64FE /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = D83E336627F1E561003F64FE /* FacebookLogin */; };
+		D83E336927F1E561003F64FE /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = D83E336827F1E561003F64FE /* FacebookShare */; };
+		D87C50892973FB3500016192 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = D87C50882973FB3500016192 /* FirebaseDynamicLinks */; };
+		D87C508F297E73CD00016192 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87C508E297E73CC00016192 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D82931F5274B69AA00DD4174 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D82931D6274B69A800DD4174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82931DD274B69A800DD4174;
+			remoteInfo = mimicle;
+		};
+		D82931FF274B69AA00DD4174 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D82931D6274B69A800DD4174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82931DD274B69A800DD4174;
+			remoteInfo = mimicle;
+		};
+		D82ECC762769D08000F82838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D82931D6274B69A800DD4174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82ECC702769D08000F82838;
+			remoteInfo = Service;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D82ECC7C2769D08000F82838 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D82ECC782769D08000F82838 /* Service.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D827CDCC275732F200220B36 /* AppMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMetaData.swift; sourceTree = "<group>"; };
+		D827CDCE2757648900220B36 /* PushInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushInfoData.swift; sourceTree = "<group>"; };
+		D8288AB8274CA2860055773F /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D8289E8927E080FD002D334F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		D8289E8A27E080FD002D334F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D8289E8B27E080FD002D334F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainInterface.strings; sourceTree = "<group>"; };
+		D8289E8F27E08286002D334F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8289E9127E08288002D334F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D828A1FD2754E21300ADC8D4 /* MimicleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimicleApi.swift; sourceTree = "<group>"; };
+		D82931DE274B69A800DD4174 /* mimiclefr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimiclefr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82931E1274B69A800DD4174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D82931E3274B69A800DD4174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D82931E5274B69A800DD4174 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D82931E8274B69A800DD4174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D82931EA274B69AA00DD4174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D82931ED274B69AA00DD4174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D82931EF274B69AA00DD4174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82931F4274B69AA00DD4174 /* mimiclefrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mimiclefrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82931F8274B69AA00DD4174 /* mimicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimicleTests.swift; sourceTree = "<group>"; };
+		D82931FE274B69AA00DD4174 /* mimiclefrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mimiclefrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8293202274B69AA00DD4174 /* mimicleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimicleUITests.swift; sourceTree = "<group>"; };
+		D8293204274B69AA00DD4174 /* mimicleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimicleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D8293212274B715200DD4174 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D82EB42028309D550016BFE3 /* WKWebViewDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewDownloadHelper.swift; sourceTree = "<group>"; };
+		D82EB42128309D550016BFE3 /* WKDownloadHelper+types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKDownloadHelper+types.swift"; sourceTree = "<group>"; };
+		D82EB42228309D550016BFE3 /* WKDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDownloadHelper.swift; sourceTree = "<group>"; };
+		D82EB42328309D550016BFE3 /* WKDownloadHelper+delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKDownloadHelper+delegate.swift"; sourceTree = "<group>"; };
+		D82EB42428309D550016BFE3 /* WKDownloadHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKDownloadHelperDelegate.swift; sourceTree = "<group>"; };
+		D82ECC672769B03800F82838 /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bell.wav; path = sound/bell.wav; sourceTree = "<group>"; };
+		D82ECC682769B03800F82838 /* electric_piano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = electric_piano.wav; path = sound/electric_piano.wav; sourceTree = "<group>"; };
+		D82ECC692769B03800F82838 /* mimic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = mimic.wav; path = sound/mimic.wav; sourceTree = "<group>"; };
+		D82ECC712769D08000F82838 /* Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Service.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D82ECC732769D08000F82838 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D82ECC752769D08000F82838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82ECC822769D09F00F82838 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		D82ECC842769D09F00F82838 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		D82ECC872769D09F00F82838 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		D82ECC8A2769D09F00F82838 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D82ECC8C2769D09F00F82838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82FB7B02767353400DB5F16 /* mimicle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mimicle.entitlements; sourceTree = "<group>"; };
+		D83BD9E027DB2E2E000567AF /* splash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash2.png; sourceTree = "<group>"; };
+		D87C508E297E73CC00016192 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D82931DB274B69A800DD4174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83E336727F1E561003F64FE /* FacebookLogin in Frameworks */,
+				D82FB7B727673A9D00DB5F16 /* FirebaseMessaging in Frameworks */,
+				D83E336927F1E561003F64FE /* FacebookShare in Frameworks */,
+				D828A2042754E72400ADC8D4 /* RxMoya in Frameworks */,
+				D83E336527F1E561003F64FE /* FacebookCore in Frameworks */,
+				D828A2022754E72400ADC8D4 /* Moya in Frameworks */,
+				D82FB7B527673A9D00DB5F16 /* FirebaseCrashlytics in Frameworks */,
+				D82FB7B327673A9D00DB5F16 /* FirebaseAnalytics in Frameworks */,
+				D8293213274B715200DD4174 /* WebKit.framework in Frameworks */,
+				D87C50892973FB3500016192 /* FirebaseDynamicLinks in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931F1274B69AA00DD4174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931FB274B69AA00DD4174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82ECC6E2769D08000F82838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82ECC942769FD9A00F82838 /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D827CDCB275732D700220B36 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D827CDCC275732F200220B36 /* AppMetaData.swift */,
+				D827CDCE2757648900220B36 /* PushInfoData.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D8288AB7274CA25F0055773F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				D8288AB8274CA2860055773F /* Reachability.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		D828A1FC2754E1EC00ADC8D4 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				D828A1FD2754E21300ADC8D4 /* MimicleApi.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		D82931D5274B69A800DD4174 = {
+			isa = PBXGroup;
+			children = (
+				D82931E0274B69A800DD4174 /* mimiclefr */,
+				D82931F7274B69AA00DD4174 /* mimicleTests */,
+				D8293201274B69AA00DD4174 /* mimicleUITests */,
+				D82ECC722769D08000F82838 /* Service */,
+				D82ECC862769D09F00F82838 /* Content */,
+				D82931DF274B69A800DD4174 /* Products */,
+				D8293211274B715200DD4174 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D82931DF274B69A800DD4174 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D82931DE274B69A800DD4174 /* mimiclefr.app */,
+				D82931F4274B69AA00DD4174 /* mimiclefrTests.xctest */,
+				D82931FE274B69AA00DD4174 /* mimiclefrUITests.xctest */,
+				D82ECC712769D08000F82838 /* Service.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D82931E0274B69A800DD4174 /* mimiclefr */ = {
+			isa = PBXGroup;
+			children = (
+				D87C508E297E73CC00016192 /* GoogleService-Info.plist */,
+				D82ECC672769B03800F82838 /* bell.wav */,
+				D82ECC682769B03800F82838 /* electric_piano.wav */,
+				D82ECC692769B03800F82838 /* mimic.wav */,
+				D82FB7B02767353400DB5F16 /* mimicle.entitlements */,
+				D827CDCB275732D700220B36 /* model */,
+				D828A1FC2754E1EC00ADC8D4 /* network */,
+				D8288AB7274CA25F0055773F /* util */,
+				D82931E1274B69A800DD4174 /* AppDelegate.swift */,
+				D82EB42A28309DE20016BFE3 /* download */,
+				D82931E3274B69A800DD4174 /* SceneDelegate.swift */,
+				D82931E5274B69A800DD4174 /* WebViewController.swift */,
+				D82931E7274B69A800DD4174 /* Main.storyboard */,
+				D82931EA274B69AA00DD4174 /* Assets.xcassets */,
+				D83BD9E027DB2E2E000567AF /* splash2.png */,
+				D82931EC274B69AA00DD4174 /* LaunchScreen.storyboard */,
+				D82931EF274B69AA00DD4174 /* Info.plist */,
+				D8289E9027E08286002D334F /* InfoPlist.strings */,
+			);
+			path = mimiclefr;
+			sourceTree = "<group>";
+		};
+		D82931F7274B69AA00DD4174 /* mimicleTests */ = {
+			isa = PBXGroup;
+			children = (
+				D82931F8274B69AA00DD4174 /* mimicleTests.swift */,
+			);
+			path = mimicleTests;
+			sourceTree = "<group>";
+		};
+		D8293201274B69AA00DD4174 /* mimicleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8293202274B69AA00DD4174 /* mimicleUITests.swift */,
+				D8293204274B69AA00DD4174 /* mimicleUITestsLaunchTests.swift */,
+			);
+			path = mimicleUITests;
+			sourceTree = "<group>";
+		};
+		D8293211274B715200DD4174 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8293212274B715200DD4174 /* WebKit.framework */,
+				D82ECC822769D09F00F82838 /* UserNotifications.framework */,
+				D82ECC842769D09F00F82838 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D82EB42A28309DE20016BFE3 /* download */ = {
+			isa = PBXGroup;
+			children = (
+				D82EB42228309D550016BFE3 /* WKDownloadHelper.swift */,
+				D82EB42328309D550016BFE3 /* WKDownloadHelper+delegate.swift */,
+				D82EB42128309D550016BFE3 /* WKDownloadHelper+types.swift */,
+				D82EB42428309D550016BFE3 /* WKDownloadHelperDelegate.swift */,
+				D82EB42028309D550016BFE3 /* WKWebViewDownloadHelper.swift */,
+			);
+			path = download;
+			sourceTree = "<group>";
+		};
+		D82ECC722769D08000F82838 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D82ECC732769D08000F82838 /* NotificationService.swift */,
+				D82ECC752769D08000F82838 /* Info.plist */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D82ECC862769D09F00F82838 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				D82ECC872769D09F00F82838 /* NotificationViewController.swift */,
+				D82ECC892769D09F00F82838 /* MainInterface.storyboard */,
+				D82ECC8C2769D09F00F82838 /* Info.plist */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D82931DD274B69A800DD4174 /* mimiclefr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8293208274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefr" */;
+			buildPhases = (
+				D82931DA274B69A800DD4174 /* Sources */,
+				D82931DB274B69A800DD4174 /* Frameworks */,
+				D82931DC274B69A800DD4174 /* Resources */,
+				D82ECC7C2769D08000F82838 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D82ECC772769D08000F82838 /* PBXTargetDependency */,
+			);
+			name = mimiclefr;
+			packageProductDependencies = (
+				D828A2012754E72400ADC8D4 /* Moya */,
+				D828A2032754E72400ADC8D4 /* RxMoya */,
+				D82FB7B227673A9D00DB5F16 /* FirebaseAnalytics */,
+				D82FB7B427673A9D00DB5F16 /* FirebaseCrashlytics */,
+				D82FB7B627673A9D00DB5F16 /* FirebaseMessaging */,
+				D83E336427F1E561003F64FE /* FacebookCore */,
+				D83E336627F1E561003F64FE /* FacebookLogin */,
+				D83E336827F1E561003F64FE /* FacebookShare */,
+				D87C50882973FB3500016192 /* FirebaseDynamicLinks */,
+			);
+			productName = mimicle;
+			productReference = D82931DE274B69A800DD4174 /* mimiclefr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D82931F3274B69AA00DD4174 /* mimiclefrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D829320B274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefrTests" */;
+			buildPhases = (
+				D82931F0274B69AA00DD4174 /* Sources */,
+				D82931F1274B69AA00DD4174 /* Frameworks */,
+				D82931F2274B69AA00DD4174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D82931F6274B69AA00DD4174 /* PBXTargetDependency */,
+			);
+			name = mimiclefrTests;
+			productName = mimicleTests;
+			productReference = D82931F4274B69AA00DD4174 /* mimiclefrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D82931FD274B69AA00DD4174 /* mimiclefrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D829320E274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefrUITests" */;
+			buildPhases = (
+				D82931FA274B69AA00DD4174 /* Sources */,
+				D82931FB274B69AA00DD4174 /* Frameworks */,
+				D82931FC274B69AA00DD4174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8293200274B69AA00DD4174 /* PBXTargetDependency */,
+			);
+			name = mimiclefrUITests;
+			productName = mimicleUITests;
+			productReference = D82931FE274B69AA00DD4174 /* mimiclefrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D82ECC702769D08000F82838 /* Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82ECC792769D08000F82838 /* Build configuration list for PBXNativeTarget "Service" */;
+			buildPhases = (
+				D82ECC6D2769D08000F82838 /* Sources */,
+				D82ECC6E2769D08000F82838 /* Frameworks */,
+				D82ECC6F2769D08000F82838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Service;
+			packageProductDependencies = (
+				D82ECC932769FD9A00F82838 /* FirebaseMessaging */,
+			);
+			productName = Service;
+			productReference = D82ECC712769D08000F82838 /* Service.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D82931D6274B69A800DD4174 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					D82931DD274B69A800DD4174 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					D82931F3274B69AA00DD4174 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D82931DD274B69A800DD4174;
+					};
+					D82931FD274B69AA00DD4174 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = D82931DD274B69A800DD4174;
+					};
+					D82ECC702769D08000F82838 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = D82931D9274B69A800DD4174 /* Build configuration list for PBXProject "mimiclefr" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ko,
+			);
+			mainGroup = D82931D5274B69A800DD4174;
+			packageReferences = (
+				D828A2002754E72400ADC8D4 /* XCRemoteSwiftPackageReference "Moya" */,
+				D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D83E336327F1E561003F64FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
+			productRefGroup = D82931DF274B69A800DD4174 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D82931DD274B69A800DD4174 /* mimiclefr */,
+				D82931F3274B69AA00DD4174 /* mimiclefrTests */,
+				D82931FD274B69AA00DD4174 /* mimiclefrUITests */,
+				D82ECC702769D08000F82838 /* Service */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D82931DC274B69A800DD4174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82931EE274B69AA00DD4174 /* LaunchScreen.storyboard in Resources */,
+				D83BD9E127DB2E2E000567AF /* splash2.png in Resources */,
+				D87C508F297E73CD00016192 /* GoogleService-Info.plist in Resources */,
+				D82ECC6B2769B03800F82838 /* electric_piano.wav in Resources */,
+				D82ECC6C2769B03800F82838 /* mimic.wav in Resources */,
+				D82ECC6A2769B03800F82838 /* bell.wav in Resources */,
+				D82931EB274B69AA00DD4174 /* Assets.xcassets in Resources */,
+				D8289E8E27E08286002D334F /* InfoPlist.strings in Resources */,
+				D82931E9274B69A800DD4174 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931F2274B69AA00DD4174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931FC274B69AA00DD4174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82ECC6F2769D08000F82838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D82931DA274B69A800DD4174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82931E6274B69A800DD4174 /* WebViewController.swift in Sources */,
+				D82931E2274B69A800DD4174 /* AppDelegate.swift in Sources */,
+				D82EB42828309D550016BFE3 /* WKDownloadHelper+delegate.swift in Sources */,
+				D827CDCF2757648900220B36 /* PushInfoData.swift in Sources */,
+				D82EB42528309D550016BFE3 /* WKWebViewDownloadHelper.swift in Sources */,
+				D82EB42628309D550016BFE3 /* WKDownloadHelper+types.swift in Sources */,
+				D82EB42928309D550016BFE3 /* WKDownloadHelperDelegate.swift in Sources */,
+				D827CDCD275732F200220B36 /* AppMetaData.swift in Sources */,
+				D8288AB9274CA2860055773F /* Reachability.swift in Sources */,
+				D828A1FE2754E21300ADC8D4 /* MimicleApi.swift in Sources */,
+				D82931E4274B69A800DD4174 /* SceneDelegate.swift in Sources */,
+				D82EB42728309D550016BFE3 /* WKDownloadHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931F0274B69AA00DD4174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82931F9274B69AA00DD4174 /* mimicleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82931FA274B69AA00DD4174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8293203274B69AA00DD4174 /* mimicleUITests.swift in Sources */,
+				D8293205274B69AA00DD4174 /* mimicleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D82ECC6D2769D08000F82838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D82ECC742769D08000F82838 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D82931F6274B69AA00DD4174 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82931DD274B69A800DD4174 /* mimiclefr */;
+			targetProxy = D82931F5274B69AA00DD4174 /* PBXContainerItemProxy */;
+		};
+		D8293200274B69AA00DD4174 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82931DD274B69A800DD4174 /* mimiclefr */;
+			targetProxy = D82931FF274B69AA00DD4174 /* PBXContainerItemProxy */;
+		};
+		D82ECC772769D08000F82838 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D82ECC702769D08000F82838 /* Service */;
+			targetProxy = D82ECC762769D08000F82838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8289E9027E08286002D334F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8289E8F27E08286002D334F /* en */,
+				D8289E9127E08288002D334F /* ko */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D82931E7274B69A800DD4174 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82931E8274B69A800DD4174 /* Base */,
+				D8289E8927E080FD002D334F /* ko */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D82931EC274B69AA00DD4174 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82931ED274B69AA00DD4174 /* Base */,
+				D8289E8A27E080FD002D334F /* ko */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D82ECC892769D09F00F82838 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D82ECC8A2769D09F00F82838 /* Base */,
+				D8289E8B27E080FD002D334F /* ko */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8293206274B69AA00DD4174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8293207274B69AA00DD4174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8293209274B69AA00DD4174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = mimiclefr/mimicle.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = C92WJ3HG7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mimiclefr/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "L'autorisation de l'appareil photo est requise pour prendre une photo à utiliser comme arrière-plan de dessin.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Une autorisation de localisation est requise pour enregistrer les informations sur les photos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Autorisations du microphone pour prendre des vidéos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "L'autorisation de l'album est requise pour importer une photo à utiliser comme arrière-plan de dessin.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = mimiclefr.mimiclefr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MimicleFr_develope;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D829320A274B69AA00DD4174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = mimiclefr/mimicle.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = C92WJ3HG7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mimiclefr/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "L'autorisation de l'appareil photo est requise pour prendre une photo à utiliser comme arrière-plan de dessin.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Une autorisation de localisation est requise pour enregistrer les informations sur les photos";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Autorisations du microphone pour prendre des vidéos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "L'autorisation de l'album est requise pour importer une photo à utiliser comme arrière-plan de dessin.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = mimiclefr.mimiclefr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MimicleFr_appstore;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D829320C274B69AA00DD4174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mimicle.mimicleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mimiclefr.app/mimiclefr";
+			};
+			name = Debug;
+		};
+		D829320D274B69AA00DD4174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mimicle.mimicleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mimiclefr.app/mimiclefr";
+			};
+			name = Release;
+		};
+		D829320F274B69AA00DD4174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mimicle.mimicleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mimicle;
+			};
+			name = Debug;
+		};
+		D8293210274B69AA00DD4174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mimicle.mimicleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = mimicle;
+			};
+			name = Release;
+		};
+		D82ECC7A2769D08000F82838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C92WJ3HG7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Service/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Service;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = mimiclefr.mimiclefr.service;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D82ECC7B2769D08000F82838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C92WJ3HG7Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Service/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Service;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = mimiclefr.mimiclefr.Service;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = MimicleFr_push_appstore;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D82931D9274B69A800DD4174 /* Build configuration list for PBXProject "mimiclefr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8293206274B69AA00DD4174 /* Debug */,
+				D8293207274B69AA00DD4174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8293208274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8293209274B69AA00DD4174 /* Debug */,
+				D829320A274B69AA00DD4174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D829320B274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D829320C274B69AA00DD4174 /* Debug */,
+				D829320D274B69AA00DD4174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D829320E274B69AA00DD4174 /* Build configuration list for PBXNativeTarget "mimiclefrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D829320F274B69AA00DD4174 /* Debug */,
+				D8293210274B69AA00DD4174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82ECC792769D08000F82838 /* Build configuration list for PBXNativeTarget "Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D82ECC7A2769D08000F82838 /* Debug */,
+				D82ECC7B2769D08000F82838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D828A2002754E72400ADC8D4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		D83E336327F1E561003F64FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D828A2012754E72400ADC8D4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D828A2002754E72400ADC8D4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		D828A2032754E72400ADC8D4 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D828A2002754E72400ADC8D4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		D82ECC932769FD9A00F82838 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D82FB7B227673A9D00DB5F16 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D82FB7B427673A9D00DB5F16 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D82FB7B627673A9D00DB5F16 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D83E336427F1E561003F64FE /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83E336327F1E561003F64FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		D83E336627F1E561003F64FE /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83E336327F1E561003F64FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		D83E336827F1E561003F64FE /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D83E336327F1E561003F64FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		D87C50882973FB3500016192 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D82FB7B127673A9D00DB5F16 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D82931D6274B69A800DD4174 /* Project object */;
+}
