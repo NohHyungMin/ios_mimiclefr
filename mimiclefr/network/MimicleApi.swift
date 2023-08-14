@@ -10,7 +10,7 @@ import Moya
 import UIKit
 
 enum MimicleApi {
-    case getMeta(osType: String, versionCode: String)
+    case getMeta(osType: String, versionCode: String, model: String, osversion: String, locale: String)
     case setPushInfo(osType: String, versionCode: String, pushkey: String, uuid: String, memno: String)
 }
 
@@ -44,8 +44,8 @@ extension MimicleApi: TargetType {
 
      var task: Task {
          switch self {
-         case .getMeta(let osType, let versionCode):
-             return .requestParameters(parameters: ["ostype" : osType, "vcode" : versionCode], encoding: URLEncoding.queryString)
+         case .getMeta(let osType, let versionCode, let model, let osversion, let locale):
+             return .requestParameters(parameters: ["ostype" : osType, "vcode" : versionCode, "model" : model, "osversion" : osversion, "locale" : locale], encoding: URLEncoding.queryString)
          case .setPushInfo(let osType, let versionCode, let pushkey, let uuid ,let memno):
              return .requestParameters(parameters: ["ostype" : osType, "vcode" : versionCode, "pushkey" : pushkey, "uuid" : uuid, "memno" : memno], encoding: URLEncoding.queryString)
          }
